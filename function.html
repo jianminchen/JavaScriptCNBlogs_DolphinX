@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var f = function foo() {
+            return typeof foo; // foo是在内部作用域内有效
+        };
+        // foo在外部用于是不可见的
+        typeof foo; // "undefined"
+        f(); // "function"
+
+
+        function foo() {
+            return bar();
+        }
+        function bar() {
+            return baz();
+        }
+        function baz() {
+            debugger;
+        }
+        foo();
+    </script>
+
+</body>
+</html>

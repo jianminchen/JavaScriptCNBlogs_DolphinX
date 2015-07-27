@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+
+        构造简单对象
+
+        当然prototype不是专门为解决上面问题而定义的，但是却解决了上面问题。了解了这些知识就可以构建一个科学些的、复用率高的对象，如果希望实例对象的属性或函数则定义到prototype中，如果希望每个实例单独拥有的属性或方法则定义到this中，可以通过构造函数传递实例化参数。
+
+
+        */
+
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.share = [];
+
+        Person.prototype.printName = function () {
+            alert(this.name);
+        }
+
+    </script>
+</body>
+</html>

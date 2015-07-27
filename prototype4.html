@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function Person(name){
+            this.name=name;
+        }
+            
+        Person.prototype.share=[];
+            
+        Person.prototype.printName=function(){
+            alert(this.name);
+        }
+            
+        var person1=new Person('Byron');
+        var person2=new Person('Frank');
+            
+        person1.share.push(1);
+        person2.share.push(2);
+        console.log(person2.share); //[1,2]
+
+        /*
+        果不其然！实际上当代码读取某个对象的某个属性的时候，都会执行一遍搜索，目标是具有给定名字的属性，搜索首先从对象实例开始，如果在实例中找到该属性则返回，如果没有则查找prototype，如果还是没有找到则继续递归prototype的prototype对象，直到找到为止，如果递归到object仍然没有则返回错误。同样道理如果在实例中定义如prototype同名的属性或函数，则会覆盖prototype的属性或函数。
+        */
+
+    </script>
+</body>
+</html>

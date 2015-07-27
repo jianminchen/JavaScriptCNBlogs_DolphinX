@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.share = [];
+
+        var person = new Person('Byron');
+        person.share = 0;
+
+        console.log(person.share); //0而不是prototype中的[]
+
+
+
+    </script>
+</body>
+</html>

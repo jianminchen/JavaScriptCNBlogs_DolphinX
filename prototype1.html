@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+        实例变量、函数
+
+        在面向对象编程中除了一些库函数我们还是希望在对象定义的时候同时定义一些属性和方法，实例化后可以访问，JavaScript也能做到这样
+        */
+        function Obj() {
+            this.a = []; //实例变量
+            this.fn = function () { //实例方法
+
+            }
+        }
+
+        console.log(typeof Obj.a); //undefined
+        console.log(typeof Obj.fn); //undefined
+
+        var o = new Obj();
+        console.log(typeof o.a); //object
+        console.log(typeof o.fn); //function
+
+
+    </script>
+</body>
+</html>
